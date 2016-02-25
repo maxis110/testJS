@@ -38,8 +38,10 @@ function neighbor(arr, i, j) {
 
 function checkNeighbor(value, array) {
     var j = 0;
-    for (var i=0; i<=array.length-1; i++){
-        neighbor(array, value[i][j], value[i][j+1]);
+    if (value.length !== 0) {
+        for (var i=0; i<value.length-1; i++){
+            neighbor(array, value[i][j], value[i][j+1]);
+        }
     }
 }
 
